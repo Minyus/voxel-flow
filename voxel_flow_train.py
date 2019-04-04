@@ -52,7 +52,7 @@ def train(dataset_frame1, dataset_frame2, dataset_frame3):
 
     # Prepare model.
     model = Voxel_flow_model()
-    prediction = model.inference(input_placeholder) d
+    prediction = model.inference(input_placeholder)
     # reproduction_loss, prior_loss = model.loss(prediction, target_placeholder)
     reproduction_loss = model.loss(prediction, target_placeholder)
     # total_loss = reproduction_loss + prior_loss
