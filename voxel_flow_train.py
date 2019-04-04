@@ -87,7 +87,7 @@ def train(dataset_frame1, dataset_frame2, dataset_frame3):
     sess.run(init)
 
     # Summary Writter
-    summary_writer = tf.train.SummaryWriter(
+    summary_writer = tf.summary.FileWriter(
       FLAGS.train_dir,
       graph=sess.graph)
 
