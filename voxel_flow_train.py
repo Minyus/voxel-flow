@@ -71,9 +71,9 @@ def train(dataset_frame1, dataset_frame2, dataset_frame3):
     summaries.append(tf.summary.scalar('total_loss', total_loss))
     summaries.append(tf.summary.scalar('reproduction_loss', reproduction_loss))
     # summaries.append(tf.summary.scalar('prior_loss', prior_loss))
-    summaries.append(tf.image_summary('Input Image', input_placeholder, 3))
-    summaries.append(tf.image_summary('Output Image', prediction, 3))
-    summaries.append(tf.image_summary('Target Image', target_placeholder, 3))
+    summaries.append(tf.summary.image('Input Image', input_placeholder, 3))
+    summaries.append(tf.summary.image('Output Image', prediction, 3))
+    summaries.append(tf.summary.image('Target Image', target_placeholder, 3))
 
     # Create a saver.
     saver = tf.train.Saver(tf.all_variables())
